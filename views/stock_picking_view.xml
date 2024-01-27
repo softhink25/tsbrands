@@ -8,8 +8,8 @@
             <field name="inherit_id" ref="stock.view_picking_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='origin']" position="after">
-                    <label for="lote_recepcion" attrs="{'invisible': [('picking_type_code', '!=', 'incoming'), ('state', '!=', 'assigned')]}"/>
-                    <div class="o_row" attrs="{'invisible': [('picking_type_code', '!=', 'incoming'), ('state', '!=', 'assigned')]}" >
+                    <label for="lote_recepcion" attrs="{'invisible': ['|',('picking_type_code', '!=', 'incoming'), ('state', '!=', 'assigned')]}"/>
+                    <div class="o_row" attrs="{'invisible': ['|',('picking_type_code', '!=', 'incoming'), ('state', '!=', 'assigned')]}" >
                         <field name="lote_recepcion" />
                         <button name = "aplica_lote_recepcion" string="Aplicar" type="object" class="btn-primary" data-hotkey="l" />
                     </div>
