@@ -12,7 +12,7 @@ class StockQuant(models.Model):
             if lot_id:
                 domain = expression.AND([['|', ('lot_id', '=', lot_id.id), ('lot_id', '=', False)], domain])
             else:
-                domain = expression.AND([['|', ('lot_id', 'not in', ["OUTLET", "MERMA"] ), ('lot_id', '=', False) ], domain])
+                domain = expression.AND([['|', ('lot_id', 'not in', ["OUTLET", "MERMA", "DEVOLUCIONES"] ), ('lot_id', '=', False) ], domain])
             if package_id:
                 domain = expression.AND([[('package_id', '=', package_id.id)], domain])
             if owner_id:
