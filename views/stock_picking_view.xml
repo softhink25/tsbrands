@@ -10,7 +10,7 @@
                 <xpath expr="//field[@name='origin']" position="after">
                     <label for="lote_recepcion" attrs="{'invisible': ['|',('picking_type_code', '!=', 'incoming'), ('state', '!=', 'assigned')]}"/>
                     <div class="o_row" attrs="{'invisible': ['|',('picking_type_code', '!=', 'incoming'), ('state', '!=', 'assigned')]}" >
-                        <field name="lote_recepcion" placeholder="Ej: 20/12/2023" />
+                        <field name="lote_recepcion" placeholder="AAMMDD" />
                         <button name = "aplica_lote_recepcion" string="Aplicar" type="object" class="btn-primary" data-hotkey="l" />
                     </div>
 
