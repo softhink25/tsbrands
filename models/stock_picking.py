@@ -15,7 +15,8 @@ class StockPicking(models.Model):
         self.lote_recepcion = valor;
         return valor;
 
-    lote_recepcion = fields.Char("Lote de recepción",compute =_default_lote, readonly = False, store = True, default= _default_lote )
+    #lote_recepcion = fields.Char("Lote de recepción",compute =_default_lote, readonly = False, store = True, default= _default_lote )
+    lote_recepcion = fields.Char("Lote de recepción",  readonly=False, store=True)
 
     def aplica_lote_recepcion(self):
         None;
